@@ -4,8 +4,9 @@ import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/scss/react-flags-select.scss';
 import ReactPlayer from 'react-player';
 import data from './data/data.js';
+import 'semantic-ui-css/semantic.min.css';
 import { Button } from 'semantic-ui-react';
-import header from './assets/header.png'
+import header from './assets/header.png';
 
 let countries = ["AL", "AU", "AT", "BE", "BR", "CM", "CA", "CN", "DK", "EE", "FR", "GA", "DE", "GR", "IS", "ID", "IE", "IT", "JM", "JP", "NL", "NZ", "NG", "NO", "PT", "PR", "ZA", "KR", "ES", "SE", "CH", "TR", "GB", "SD", "SK", "HK", "GH", "PE", "SC", "RU", "KZ", "BY", "IN", "MA", "RO", "CO", "VE", "PL", "FI", "MZ", "TH", "AM", "ML", "PH", "UA", "IL", "CG", "AC"];
 class App extends React.Component {
@@ -84,6 +85,11 @@ class App extends React.Component {
               onSelect={this.onSelectFlag.bind(this)}
             />
           </div>
+          <div style={{ margin: '2%' }}>
+              <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} />
+              <span style={{ margin: '1%' }} />
+              <Button content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
+            </div>
           <div style={{ height: 600, backgroundImage: header }}>
             <ReactPlayer
               url={this.state.YTurl}
@@ -91,11 +97,7 @@ class App extends React.Component {
               height='100%'
               playing={this.state.pause}
             />
-            <div style={{ margin: '2%' }}>
-              <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} />
-              <span style={{ margin: '1%' }} />
-              <Button content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
-            </div>
+
           </div>
         </div>
       </center>
