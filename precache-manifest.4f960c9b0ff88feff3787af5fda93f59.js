@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "48ecf77de7f8494b5bfa6de08ae7f391",
+    "revision": "0beef997723e321febdf32a801d91ce1",
     "url": "/RapZoneTest/index.html"
   },
   {
-    "revision": "b4df49b44b49f572a4e0",
-    "url": "/RapZoneTest/static/css/2.dc7505d2.chunk.css"
+    "revision": "c26083b13e17ae269461",
+    "url": "/RapZoneTest/static/css/2.250f121a.chunk.css"
   },
   {
-    "revision": "66e9d8fabf73591481fd",
+    "revision": "21db21c07e52ed8a262f",
     "url": "/RapZoneTest/static/css/main.2cce8147.chunk.css"
   },
   {
-    "revision": "b4df49b44b49f572a4e0",
-    "url": "/RapZoneTest/static/js/2.ee143346.chunk.js"
+    "revision": "c26083b13e17ae269461",
+    "url": "/RapZoneTest/static/js/2.81cfe511.chunk.js"
   },
   {
-    "revision": "66e9d8fabf73591481fd",
-    "url": "/RapZoneTest/static/js/main.a8a9050f.chunk.js"
+    "revision": "21db21c07e52ed8a262f",
+    "url": "/RapZoneTest/static/js/main.a995f2a2.chunk.js"
   },
   {
     "revision": "0211858d98542dd48e6e",
@@ -126,6 +126,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8909bc2f8e7e1074b02423dc6623dc2c",
     "url": "/RapZoneTest/static/media/br.8909bc2f.svg"
+  },
+  {
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/RapZoneTest/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "a046592bac8f2fd96e994733faf3858c",
+    "url": "/RapZoneTest/static/media/brand-icons.a046592b.woff"
+  },
+  {
+    "revision": "a1a749e89f578a49306ec2b055c073da",
+    "url": "/RapZoneTest/static/media/brand-icons.a1a749e8.svg"
+  },
+  {
+    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
+    "url": "/RapZoneTest/static/media/brand-icons.c5ebe0b3.ttf"
+  },
+  {
+    "revision": "e8c322de9658cbeb8a774b6624167c2c",
+    "url": "/RapZoneTest/static/media/brand-icons.e8c322de.woff2"
   },
   {
     "revision": "cbc1054504e15571bc38756094256810",
@@ -276,6 +296,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/RapZoneTest/static/media/fk.9144425b.svg"
   },
   {
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/RapZoneTest/static/media/flags.9c74e172.png"
+  },
+  {
     "revision": "1d9aff75f14e220de9d479d011c60b11",
     "url": "/RapZoneTest/static/media/fm.1d9aff75.svg"
   },
@@ -370,6 +394,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "70eee4ddf711fa9691203ce564952608",
     "url": "/RapZoneTest/static/media/hu.70eee4dd.svg"
+  },
+  {
+    "revision": "0ab54153eeeca0ce03978cc463b257f7",
+    "url": "/RapZoneTest/static/media/icons.0ab54153.woff2"
+  },
+  {
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/RapZoneTest/static/media/icons.8e3c7f55.eot"
+  },
+  {
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/RapZoneTest/static/media/icons.962a1bf3.svg"
+  },
+  {
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/RapZoneTest/static/media/icons.b87b9ba5.ttf"
+  },
+  {
+    "revision": "faff92145777a3cbaf8e7367b4807987",
+    "url": "/RapZoneTest/static/media/icons.faff9214.woff"
   },
   {
     "revision": "6b254ad7c2b9d7209ab342341f256bda",
@@ -650,6 +694,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "289c4ffe31e0b84ecfc69e42d91bda6b",
     "url": "/RapZoneTest/static/media/om.289c4ffe.svg"
+  },
+  {
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/RapZoneTest/static/media/outline-icons.701ae6ab.eot"
+  },
+  {
+    "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
+    "url": "/RapZoneTest/static/media/outline-icons.82f60bd0.svg"
+  },
+  {
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/RapZoneTest/static/media/outline-icons.ad97afd3.ttf"
+  },
+  {
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/RapZoneTest/static/media/outline-icons.cd6c777f.woff2"
+  },
+  {
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/RapZoneTest/static/media/outline-icons.ef60a4f6.woff"
   },
   {
     "revision": "0b468e395103cc0594b0daed90fbed0d",
