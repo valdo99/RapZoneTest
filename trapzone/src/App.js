@@ -77,7 +77,8 @@ class App extends React.Component {
       <center>
         <div style={{ backgroundImage: header }}>
           <div style={{ margin: '2%', backgroundImage: header }}>
-            <ReactFlagsSelect countries={countries}
+            <ReactFlagsSelect
+              countries={countries}
               searchable={true}
               searchPlaceholder="Search for a country"
               onSelect={this.onSelectFlag.bind(this)}
@@ -92,6 +93,7 @@ class App extends React.Component {
             />
             <div style={{ margin: '2%' }}>
               <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} />
+              <span style={{ margin: '1%' }} />
               <Button content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
             </div>
           </div>
