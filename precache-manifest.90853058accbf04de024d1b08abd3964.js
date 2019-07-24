@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "04743fdd5d949ab62e39c0f860570f2f",
+    "revision": "48ecf77de7f8494b5bfa6de08ae7f391",
     "url": "/RapZoneTest/index.html"
   },
   {
-    "revision": "afa6600f6babce875a06",
+    "revision": "b4df49b44b49f572a4e0",
     "url": "/RapZoneTest/static/css/2.dc7505d2.chunk.css"
   },
   {
-    "revision": "57e16dc4ec5a3e30b00a",
+    "revision": "66e9d8fabf73591481fd",
     "url": "/RapZoneTest/static/css/main.2cce8147.chunk.css"
   },
   {
-    "revision": "afa6600f6babce875a06",
-    "url": "/RapZoneTest/static/js/2.14067bc0.chunk.js"
+    "revision": "b4df49b44b49f572a4e0",
+    "url": "/RapZoneTest/static/js/2.ee143346.chunk.js"
   },
   {
-    "revision": "57e16dc4ec5a3e30b00a",
-    "url": "/RapZoneTest/static/js/main.b5c6a9ac.chunk.js"
+    "revision": "66e9d8fabf73591481fd",
+    "url": "/RapZoneTest/static/js/main.a8a9050f.chunk.js"
   },
   {
     "revision": "0211858d98542dd48e6e",
@@ -346,6 +346,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "47fd8d67bbde73f7a41e707682b07fac",
     "url": "/RapZoneTest/static/media/gw.47fd8d67.svg"
+  },
+  {
+    "revision": "58036a188ebee7b0e28b31b50b895477",
+    "url": "/RapZoneTest/static/media/header.58036a18.png"
   },
   {
     "revision": "bb078da163b527e5f98a11b1d7524919",
