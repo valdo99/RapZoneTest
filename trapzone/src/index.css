@@ -1,3 +1,6 @@
+html {
+  background-image: linear-gradient(to bottom,transparent 0%,transparent 50%, #242726 50%, #221f1f 100% );
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

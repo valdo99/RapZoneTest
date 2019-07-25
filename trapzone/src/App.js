@@ -7,8 +7,10 @@ import data from './data/data.js';
 import 'semantic-ui-css/semantic.min.css';
 import { Button } from 'semantic-ui-react';
 import header from './assets/header.png';
+import { Divider } from 'semantic-ui-react';
+import { Menu, Segment, Container } from 'semantic-ui-react';
 
-let countries = ["AL", "AU", "AT", "BE", "BR", "CM", "CA", "CN", "DK", "EE", "FR", "GA", "DE", "GR", "IS", "ID", "IE", "IT", "JM", "JP", "NL", "NZ", "NG", "NO", "PT", "PR", "ZA", "KR", "ES", "SE", "CH", "TR", "GB", "SD", "SK", "HK", "GH", "PE", "SC", "RU", "KZ", "BY", "IN", "MA", "RO", "CO", "VE", "PL", "FI", "MZ", "TH", "AM", "ML", "PH", "UA", "IL", "CG", "AC"];
+let countries = ["AL", "AU", "AT", "BE", "BR", "CM", "CA", "CN", "DK", "EE", "FR", "GA", "DE", "GR", "IS", "ID", "IE", "IT", "JM", "JP", "NL", "NZ", "NG", "NO", "PT", "PR", "ZA", "KR", "ES", "SE", "CH", "TR", "GB", "SD", "SK", "HK", "GH", "PE", "SC", "RU", "KZ", "BY", "IN", "MA", "RO", "CO", "PL", "FI", "MZ", "TH", "AM", "ML", "PH", "UA", "IL", "CG", "AC"];
 class App extends React.Component {
   constructor(props) {
     let randIndex = Math.round(0 + (Math.random() * (data.length)));
@@ -16,12 +18,15 @@ class App extends React.Component {
     this.state = {
       selectedCountry: '',
       YTurl: data[randIndex].youtube,
-      pause: true
+      pause: true,
+      YTID: '',
+      activeItem: 'home',
+      videostar: 0
     }
 
   }
   componentDidMount() {
-
+    document.body.classList.add("background-black");
   }
 
   componentWillUnmount() {
@@ -39,7 +44,8 @@ class App extends React.Component {
     let index = Math.round(0 + (Math.random() * (country.length)));
     this.setState((state, props) => ({
       selectedCountry: countryCode,
-      YTurl: country[index].youtube
+      YTurl: country[index].youtube,
+      YTID: country[index].id
     })
     );
 
@@ -59,7 +65,8 @@ class App extends React.Component {
     if (this.state.selectedCountry === '') {
       let allIndex = Math.round(0 + (Math.random() * (data.length)));
       this.setState((state, props) => ({
-        YTurl: data[allIndex].youtube
+        YTurl: data[allIndex].youtube,
+        YTID: data[allIndex].id
       })
       );
 
@@ -67,49 +74,116 @@ class App extends React.Component {
       var countryforNext = data.filter(c => c.country === this.state.selectedCountry)
       var index = Math.round(0 + (Math.random() * (countryforNext.length)));
       this.setState((state, props) => ({
-        YTurl: countryforNext[index].youtube
+        YTurl: countryforNext[index].youtube,
+        YTID: countryforNext[index].id
       })
       );
     }
   }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
   render() {
+    if (this.state.activeItem === 'home') {
+      return (
 
-    return (
-      <center>
-        <div className='bgimg'>
+        <div>
+          <Container textAlign='center'>
+            <Segment inverted >
+              <Menu inverted pointing secondary >
+                <h1>G-Zone</h1>
+                <Menu.Item
+                  icon={'home'}
+                  position={'right'}
+                  name='home'
+                  active={this.state.activeItem === 'home'}
+                  onClick={this.handleItemClick} />
+                <Menu.Item
+                  icon={''}
+                  name='about'
+                  active={this.state.activeItem === 'about'}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                  name='contact'
+                  active={this.state.activeItem === 'contact'}
+                  onClick={this.handleItemClick}
+                />
+              </Menu>
+            </Segment>
+            <Divider />
+          </Container>
+          <center>
+            <div className='bgimg'>
 
-          <div style={{ margin: '2%', display:'felx' }}>
-            <div style = {{ float:'left'}}>
-            <ReactFlagsSelect
-              style={{color:'white'}}
-              countries={countries}
-              searchPlaceholder="Search for a country"
-              onSelect={this.onSelectFlag.bind(this)}
-            />
-            </div>
-            <div style={{ float:'center'}}>
-            {this.state.pause===false
-               ?
-                <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} /> 
-                :
-                 <Button content='Play' icon='play' labelPosition='left' onClick={this.Pause.bind(this)} /> }
-              <span style={{ margin: '1%' }} />
-              <Button content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
+              <div style={{ margin: '2%', marginTop: '2%', display: 'felx' }}>
+                {this.state.pause === true
+                  ?
+                  <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} />
+                  :
+                  <Button content='Play' icon='play' labelPosition='left' onClick={this.Pause.bind(this)} />}
+                <span style={{ margin: '1%' }} />
+                <Button content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
+                <div style={{ marginTop: 10 }}>
+                  <ReactFlagsSelect
+                    className='selector'
+                    countries={countries}
+                    searchPlaceholder="Select a Country"
+                    onSelect={this.onSelectFlag.bind(this)}
+                    selectedSize={22}
+                    optionsSize={20}
+                  />
+                </div>
               </div>
+              <div style={{ height: 600, backgroundImage: header }}>
+                <ReactPlayer
+                  url={this.state.YTurl}
+                  width='100%'
+                  height='100%'
+                  playing={this.state.pause}
+                  pip={true}
+                  onEnded={this.Next.bind(this)}
+
+                />
+
+              </div>
+
             </div>
-          <div style={{ height: 600, backgroundImage: header }}>
-            <ReactPlayer
-              url={this.state.YTurl}
-              width='100%'
-              height='100%'
-              playing={this.state.pause}
-            />
-
-          </div>
+          </center>
         </div>
-      </center>
 
-    );
+      );
+    } else {
+      return (
+        <div>
+          <Container textAlign='center'>
+            <Segment inverted >
+              <Menu inverted pointing secondary >
+                <h1>G-Zone</h1>
+                <Menu.Item
+                  icon={'home'}
+                  position={'right'}
+                  name='home'
+                  active={this.state.activeItem === 'home'}
+                  onClick={this.handleItemClick} />
+                <Menu.Item
+                  icon={''}
+                  name='about'
+                  active={this.state.activeItem === 'about'}
+                  onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                  name='contact'
+                  active={this.state.activeItem === 'contact'}
+                  onClick={this.handleItemClick}
+                />
+              </Menu>
+            </Segment>
+            <Divider />
+          </Container>
+        </div>
+      )
+    }
   };
 }
 
