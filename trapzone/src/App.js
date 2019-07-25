@@ -76,19 +76,26 @@ class App extends React.Component {
 
     return (
       <center>
-        <div style={{ backgroundImage: header }}>
-          <div style={{ margin: '2%', backgroundImage: header }}>
+        <div className='bgimg'>
+
+          <div style={{ margin: '2%', display:'felx' }}>
+            <div style = {{ float:'left'}}>
             <ReactFlagsSelect
+              style={{color:'white'}}
               countries={countries}
-              searchable={true}
               searchPlaceholder="Search for a country"
               onSelect={this.onSelectFlag.bind(this)}
             />
-          </div>
-          <div style={{ margin: '2%' }}>
-              <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} />
+            </div>
+            <div style={{ float:'center'}}>
+            {this.state.pause===false
+               ?
+                <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} /> 
+                :
+                 <Button content='Play' icon='play' labelPosition='left' onClick={this.Pause.bind(this)} /> }
               <span style={{ margin: '1%' }} />
               <Button content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
+              </div>
             </div>
           <div style={{ height: 600, backgroundImage: header }}>
             <ReactPlayer

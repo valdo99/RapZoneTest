@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  
+}
+
+body html{
+ background-image: url(./assets/header.png);
+}
+
+.bgimg{
+  background-image: url(./assets/header.png);
 }
 
 .App-logo {
