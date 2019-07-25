@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa01fc96b670ba9ddae14baeacfc99cb",
+    "revision": "634bd4474636359456beb3d34373e493",
     "url": "/RapZoneTest/index.html"
   },
   {
-    "revision": "ef7088d5d30570ee7914",
+    "revision": "8e65b3b078b90c73eb3c",
     "url": "/RapZoneTest/static/css/2.250f121a.chunk.css"
   },
   {
-    "revision": "8c964b20c9bdffcb017e",
-    "url": "/RapZoneTest/static/css/main.64971b5e.chunk.css"
+    "revision": "a3996b46bc87d23e3da2",
+    "url": "/RapZoneTest/static/css/main.75d205c4.chunk.css"
   },
   {
-    "revision": "ef7088d5d30570ee7914",
-    "url": "/RapZoneTest/static/js/2.e791bd4e.chunk.js"
+    "revision": "8e65b3b078b90c73eb3c",
+    "url": "/RapZoneTest/static/js/2.3ae373b3.chunk.js"
   },
   {
-    "revision": "8c964b20c9bdffcb017e",
-    "url": "/RapZoneTest/static/js/main.d2e51139.chunk.js"
+    "revision": "a3996b46bc87d23e3da2",
+    "url": "/RapZoneTest/static/js/main.00057624.chunk.js"
   },
   {
     "revision": "0211858d98542dd48e6e",
     "url": "/RapZoneTest/static/js/runtime~main.eb4dc373.js"
+  },
+  {
+    "revision": "a757cf98248158b44d7dfd4ba25365f6",
+    "url": "/RapZoneTest/static/media/White Text.a757cf98.png"
   },
   {
     "revision": "2f0263e0853b6f2c798368f73ac87cde",

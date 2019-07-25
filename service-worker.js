@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/RapZoneTest/precache-manifest.136fd2314b94878633902a4f16b8bafb.js"
+  "/RapZoneTest/precache-manifest.436a87cda7d423e7e5b174ab5e5a1d65.js"
 );
 
 self.addEventListener('message', (event) => {
