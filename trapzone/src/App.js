@@ -91,7 +91,7 @@ class App extends React.Component {
           <Container textAlign='center'>
             <Segment inverted >
               <Menu inverted pointing secondary >
-                <h1>G-Zone</h1>
+                <h2>G-Zone</h2>
                 <Menu.Item
                   icon={'home'}
                   position={'right'}
@@ -159,7 +159,7 @@ class App extends React.Component {
           <Container textAlign='center'>
             <Segment inverted >
               <Menu inverted pointing secondary >
-                <h1>G-Zone</h1>
+                <h2>G-Zone</h2>
                 <Menu.Item
                   icon={'home'}
                   position={'right'}
