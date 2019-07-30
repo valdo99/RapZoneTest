@@ -94,7 +94,7 @@ class App extends React.Component {
           <Container textAlign='center'>
             <Segment inverted >
               <Menu inverted pointing secondary >
-                <h2>G-Zone</h2>
+              <Header as='h2' color='teal'> G Zone</Header>
                 <Menu.Item
                   icon={'home'}
                   position={'right'}
@@ -198,13 +198,13 @@ class App extends React.Component {
           </Container>
           <Grid>
     <Grid.Row>
-      <Grid.Column width={10}>
-        <center>
+      <Grid.Column width={10} style={{marginTop:'7%'}}>
+      <center>
       <Image position='center' size='large' src={astro}></Image>
       </center>
       </Grid.Column>
       <Grid.Column width={6}>
-        <div style={{float:'left', color:'white'}} >
+        <div style={{float:'left', color:'white', marginTop:'4%'}} >
         <Header as='h2' color='teal'>
           About Us
         </Header>
