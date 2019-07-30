@@ -8,11 +8,13 @@
 }
 
 body html{
- background-image: url(./assets/header.png);
+ background-color: #1B1C1D !important;
+  background-image: url(./assets/header.png) !important;
 }
 
 .bgimg{
-  background-image: url(./assets/header.png);
+background-color: #1B1C1D !important;
+  background-image: url(./assets/header.png) !important;
 }
 
 ::after .selector{

@@ -7,8 +7,11 @@ import data from './data/data.js';
 import 'semantic-ui-css/semantic.min.css';
 import { Button } from 'semantic-ui-react';
 import header from './assets/header.png';
-import { Divider } from 'semantic-ui-react';
-import { Menu, Segment, Container } from 'semantic-ui-react';
+import { Divider, Grid } from 'semantic-ui-react';
+import { Menu, Segment, Container, Header } from 'semantic-ui-react';
+import { Image} from 'semantic-ui-react';
+import TBlogo from './assets/White Text.png';
+import astro from './assets/astro.png';
 
 let countries = ["AL", "AU", "AT", "BE", "BR", "CM", "CA", "CN", "DK", "EE", "FR", "GA", "DE", "GR", "IS", "ID", "IE", "IT", "JM", "JP", "NL", "NZ", "NG", "NO", "PT", "PR", "ZA", "KR", "ES", "SE", "CH", "TR", "GB", "SD", "SK", "HK", "GH", "PE", "SC", "RU", "KZ", "BY", "IN", "MA", "RO", "CO", "PL", "FI", "MZ", "TH", "AM", "ML", "PH", "UA", "IL", "CG", "AC"];
 class App extends React.Component {
@@ -99,12 +102,13 @@ class App extends React.Component {
                   active={this.state.activeItem === 'home'}
                   onClick={this.handleItemClick} />
                 <Menu.Item
-                  icon={''}
+                  icon={'info'}
                   name='about'
                   active={this.state.activeItem === 'about'}
                   onClick={this.handleItemClick}
                 />
                 <Menu.Item
+                icon={'mail'}
                   name='contact'
                   active={this.state.activeItem === 'contact'}
                   onClick={this.handleItemClick}
@@ -119,16 +123,16 @@ class App extends React.Component {
               <div style={{ margin: '2%', marginTop: '2%', display: 'felx' }}>
                 {this.state.pause === true
                   ?
-                  <Button content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} />
+                  <Button circular={true} content='Pause' icon='pause' labelPosition='left' onClick={this.Pause.bind(this)} />
                   :
-                  <Button content='Play' icon='play' labelPosition='left' onClick={this.Pause.bind(this)} />}
+                  <Button  circular={true} content='Play' icon='play' labelPosition='left' onClick={this.Pause.bind(this)} />}
                 <span style={{ margin: '1%' }} />
-                <Button content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
+                <Button circular={true} content='Next' icon='right arrow' labelPosition='right' onClick={this.Next.bind(this)} />
                 <div style={{ marginTop: 10 }}>
                   <ReactFlagsSelect
                     className='selector'
                     countries={countries}
-                    searchPlaceholder="Select a Country"
+                    searchPlaceholder="Select Country"
                     onSelect={this.onSelectFlag.bind(this)}
                     selectedSize={22}
                     optionsSize={20}
@@ -147,8 +151,18 @@ class App extends React.Component {
                 />
 
               </div>
-
+              <div>
+              <Container textAlign='center'>
+              <Segment inverted>
+                  <h3 style={{color:'white'}}> Powered By</h3>
+                  <Image inline={true} src={TBlogo} size='small'/> 
+                  </Segment>
+                </Container>
+               
+                
+               </div>
             </div>
+
           </center>
         </div>
 
@@ -167,12 +181,13 @@ class App extends React.Component {
                   active={this.state.activeItem === 'home'}
                   onClick={this.handleItemClick} />
                 <Menu.Item
-                  icon={''}
+                  icon={'info'}
                   name='about'
                   active={this.state.activeItem === 'about'}
                   onClick={this.handleItemClick}
                 />
                 <Menu.Item
+                icon={'mail'}
                   name='contact'
                   active={this.state.activeItem === 'contact'}
                   onClick={this.handleItemClick}
@@ -181,7 +196,26 @@ class App extends React.Component {
             </Segment>
             <Divider />
           </Container>
+          <Grid>
+    <Grid.Row>
+      <Grid.Column width={10}>
+        <center>
+      <Image position='center' size='large' src={astro}></Image>
+      </center>
+      </Grid.Column>
+      <Grid.Column width={6}>
+        <div style={{float:'left', color:'white'}} >
+        <Header as='h2' color='teal'>
+          About Us
+        </Header>
         </div>
+      </Grid.Column>
+    </Grid.Row>
+    </Grid>
+          
+               
+        </div>
+        
       )
     }
   };
